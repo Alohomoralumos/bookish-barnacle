@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>L2</title>
+		<style>
+      	li {
+        	color:transparent;
+        }
+		</style>
+</head>
+<body>
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+        <li>7</li>
+        <li>8</li>
+        <li>9</li>
+        <li>10</li>
+    </ul>
+    <script>
+        let ul = document.querySelector("ul");
+        let li =document.getElementsByTagName("li");
+        for(let i=0;i<li.length;i++)
+        {
+            if(0==i%2)
+            li[i].style.backgroundColor="red";
+            else 
+            li[i].style.backgroundColor="green";
+        }
+        ul.addEventListener('click',function(event){
+            event.target.style.color="black";
+        });
+    </script>
+</body>
+</html>

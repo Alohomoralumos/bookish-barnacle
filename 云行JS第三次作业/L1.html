@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>L1</title>
+</head>
+<body>
+    <input type="button" value="点我改变主题颜色" onclick="changecolor()"/>
+    <input type="button" value="点我改变字体大小" onclick="changecase()" class="case"/>
+    <script>
+        let sign=0;
+        function changecolor()
+        {
+            let color = prompt("What is the color of the background?","green");
+            document.body.style.backgroundColor=color;
+        }
+        function changecase(){
+            let number = document.body.querySelector('.case');
+            if(0==sign)
+            {
+                number.style.fontSize="16px";
+                sign=1;
+            }
+            else if(1==sign)
+            {
+                number.style.fontSize="32px";
+                sign=-1;
+            }
+            else if(-1==sign)
+            {
+                number.style.fontSize="8px";
+                sign=0;
+            }
+        }
+    </script>
+</body>
+</html>
